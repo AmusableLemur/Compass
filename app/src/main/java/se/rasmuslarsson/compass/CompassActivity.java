@@ -6,6 +6,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -82,7 +83,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         ra.setDuration(210);
         ra.setFillAfter(true);
 
-        heading.setText("Heading: " + (int)Math.abs(currentDegree) + " degrees");
+        heading.setText("Heading: " + (int) Math.abs(currentDegree) + " degrees");
 
         image.startAnimation(ra);
         currentDegree = -azimuthInDegrees;
@@ -90,4 +91,11 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 }

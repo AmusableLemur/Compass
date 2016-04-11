@@ -9,26 +9,35 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="se.rasmuslarsson.compass.CompassActivity"
-    tools:showIn="@layout/activity_compass">
+    tools:context="se.rasmuslarsson.compass.AccelerometerActivity"
+    tools:showIn="@layout/activity_accelerometer">
 
     <TextView
-        android:id="@+id/heading"
+        android:id="@+id/x"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="0dp"
         android:layout_marginTop="5dp"
-        android:text="Heading: 0.0" />
+        android:text="X: 0.0" />
 
-    <ImageView
-        android:id="@+id/compass"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/y"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/heading"
         android:layout_centerHorizontal="true"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/compass" />
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/x"
+        android:text="Y: 0.0" />
 
+    <TextView
+        android:id="@+id/z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/y"
+        android:text="Z: 0.0" />
 </RelativeLayout>
